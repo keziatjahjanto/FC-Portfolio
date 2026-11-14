@@ -8,60 +8,77 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Libre+Baskerville:ital,wght@0,400;1,400&family=Libre+Franklin:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--paper:#faf5ec;--paper-dark:#f0e8d4;--ink:#1a1208;--ink-mid:#3d2e18;--ink-muted:#6b5a3e;--rule:#8b7355;--rule-light:#c4a97d;--accent:#5c2d0a;--max:1180px;}
+:root{--paper:#faf5ec;--paper-dark:#f0e8d4;--desk:#e8dec9;--ink:#1a1208;--ink-mid:#3d2e18;--ink-muted:#6b5a3e;--rule:#8b7355;--rule-light:#c4a97d;--accent:#5c2d0a;--max:1240px;--margin:44px;}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{font-size:15px}
-body{background:var(--paper);color:var(--ink);font-family:"Libre Baskerville",Georgia,serif;-webkit-font-smoothing:antialiased;background-image:repeating-linear-gradient(0deg,transparent,transparent 28px,rgba(139,115,85,.04) 28px,rgba(139,115,85,.04) 29px),repeating-linear-gradient(90deg,transparent,transparent 60px,rgba(139,115,85,.02) 60px,rgba(139,115,85,.02) 61px)}
+body{background:var(--desk);color:var(--ink);font-family:"Libre Baskerville",Georgia,serif;-webkit-font-smoothing:antialiased;padding:32px 24px 48px}
 a{color:inherit;text-decoration:none}
 .story a:hover .hed,.story a:hover .hed-lg,.story a:hover .hed-sm{color:var(--accent)}
-.masthead-wrap{max-width:var(--max);margin:0 auto;padding:0 1.5rem;border-bottom:3px double var(--ink)}
+.sheet{max-width:var(--max);margin:0 auto;padding:30px var(--margin) 0;background-color:var(--paper);background-image:repeating-linear-gradient(0deg,transparent,transparent 28px,rgba(139,115,85,.04) 28px,rgba(139,115,85,.04) 29px),repeating-linear-gradient(90deg,transparent,transparent 60px,rgba(139,115,85,.02) 60px,rgba(139,115,85,.02) 61px);box-shadow:0 1px 2px rgba(26,18,8,.08),0 14px 40px rgba(26,18,8,.14)}
 .masthead-top{display:none}
-.masthead-title{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:16px 0 12px;border-bottom:1px solid var(--rule-light)}
-.masthead-title h1{font-family:"Playfair Display",Georgia,serif;font-size:clamp(2.2rem,5vw,4rem);font-weight:900;line-height:1;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);text-align:center}
-.masthead-sub{display:flex;justify-content:space-between;align-items:center;padding:5px 0;border-bottom:3px double var(--ink)}
-.edition{font-family:"Libre Franklin",sans-serif;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-mid)}
-.tagline{font-family:"Playfair Display",Georgia,serif;font-style:italic;font-size:11px;color:var(--ink-muted);letter-spacing:.02em}
-.masthead-counts{display:flex;gap:1.5rem;font-family:"Libre Franklin",sans-serif;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-muted)}
+.masthead-title{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:24px;padding:0 0 18px;border-bottom:1px solid var(--rule-light)}
+.masthead-logo img{display:block;height:30px;width:auto}
+.masthead-title h1{font-family:"Playfair Display",Georgia,serif;font-size:clamp(2.4rem,4.6vw,4rem);font-weight:900;line-height:1;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);text-align:center}
+.masthead-meta{justify-self:end;text-align:right;font-family:"Libre Franklin",sans-serif;font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-muted);line-height:1.7}
+.masthead-meta b{display:block;font-family:"Playfair Display",Georgia,serif;font-size:22px;letter-spacing:.04em;color:var(--ink);line-height:1}
+.masthead-sub{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px;padding:8px 0;border-bottom:3px double var(--ink)}
+.edition{font-family:"Libre Franklin",sans-serif;font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-mid)}
+.tagline{font-family:"Playfair Display",Georgia,serif;font-style:italic;font-size:14px;color:var(--ink-muted);letter-spacing:.02em;text-align:center}
+.masthead-counts{justify-self:end;display:flex;gap:1.5rem;font-family:"Libre Franklin",sans-serif;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-muted)}
 .masthead-counts b{color:var(--ink);font-weight:700}
-.section-nav{max-width:var(--max);margin:0 auto;padding:0 1.5rem;display:grid;grid-template-columns:repeat(4,1fr);border-bottom:2px solid var(--ink);background:var(--paper-dark)}
-.nav-btn{appearance:none;background:none;border:0;border-right:1px solid var(--rule-light);padding:9px 0;text-align:center;font-family:"Libre Franklin",sans-serif;font-size:9px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-muted);cursor:pointer;transition:background 150ms,color 150ms}
-.nav-btn:first-child{border-left:1px solid var(--rule-light)}
+.section-nav{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:2px solid var(--ink);background:var(--paper-dark)}
+.nav-btn{appearance:none;background:none;border:0;border-right:1px solid var(--rule-light);padding:11px 0;text-align:center;font-family:"Libre Franklin",sans-serif;font-size:10.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-muted);cursor:pointer;transition:background 150ms,color 150ms}
+.nav-btn:last-child{border-right:0}
 .nav-btn:hover{color:var(--ink);background:rgba(139,115,85,.12)}
 .nav-btn[aria-pressed="true"]{color:var(--ink);background:rgba(139,115,85,.22);font-weight:700}
 [role=tabpanel][hidden]{display:none!important}
-.panel{max-width:var(--max);margin:0 auto;padding:0 1.5rem 4rem}
-.section-head{text-align:center;padding:14px 0 10px;border-bottom:1px solid var(--rule);margin-bottom:0;position:relative}
+.panel{padding:0 0 40px}
+.section-head{text-align:center;padding:18px 0 14px;border-bottom:1px solid var(--rule);margin-bottom:0;position:relative}
 .section-head::before,.section-head::after{content:'✦';position:absolute;top:50%;transform:translateY(-50%);color:var(--rule);font-size:12px}
 .section-head::before{left:0}
 .section-head::after{right:0}
-.section-head h2{font-family:"Libre Franklin",sans-serif;font-size:9.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--ink)}
-.section-head span{display:block;font-family:"Libre Baskerville",serif;font-style:italic;font-size:11px;color:var(--ink-muted);margin-top:2px}
+.section-head h2{font-family:"Libre Franklin",sans-serif;font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--ink)}
+.section-head span{display:block;font-family:"Libre Baskerville",serif;font-style:italic;font-size:13px;color:var(--ink-muted);margin-top:4px}
 .col-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;border-bottom:1px solid var(--rule-light)}
 .col-4{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:0;border-bottom:1px solid var(--rule-light)}
 .col-2{display:grid;grid-template-columns:1fr 1fr;gap:0;border-bottom:1px solid var(--rule-light)}
 .col-lead{display:grid;grid-template-columns:2fr 1px 1fr;gap:0;border-bottom:1px solid var(--rule-light)}
 .col-div{background:var(--rule-light);width:1px}
-.story{padding:14px 16px;border-right:1px solid var(--rule-light);position:relative}
+.story{padding:18px 18px 20px;border-right:1px solid var(--rule-light);position:relative;display:flex;flex-direction:column}
 .story:last-child{border-right:0}
-.kicker{font-family:"Libre Franklin",sans-serif;font-size:8.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:4px;padding-bottom:4px;border-bottom:1px solid var(--rule-light)}
-.byline{font-family:"Libre Franklin",sans-serif;font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-muted);margin:7px 0 5px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.story>a{display:flex;flex-direction:column;flex:1}
+.kicker{font-family:"Libre Franklin",sans-serif;font-size:9.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:4px;padding-bottom:4px;border-bottom:1px solid var(--rule-light)}
+.byline{font-family:"Libre Franklin",sans-serif;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-muted);margin:7px 0 5px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
 .hed-lg{font-family:"Playfair Display",Georgia,serif;font-weight:700;font-size:clamp(1rem,1.5vw,1.3rem);line-height:1.15;letter-spacing:-.01em;color:var(--ink);margin:5px 0 8px;transition:color 150ms}
 .hed{font-family:"Playfair Display",Georgia,serif;font-weight:700;font-size:clamp(1rem,1.5vw,1.3rem);line-height:1.15;letter-spacing:-.01em;color:var(--ink);margin:5px 0 8px;transition:color 150ms}
 .hed-sm{font-family:"Playfair Display",Georgia,serif;font-weight:700;font-size:.95rem;line-height:1.2;color:var(--ink);margin:4px 0 6px;transition:color 150ms}
-.deck{font-family:"Libre Baskerville",serif;font-size:11px;line-height:1.65;color:var(--ink-mid)}
-.badge{display:inline-block;font-size:7px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:2px 5px;border:1px solid currentColor;font-family:"Libre Franklin",sans-serif;vertical-align:middle}
+.deck{font-family:"Libre Baskerville",serif;font-size:12.5px;line-height:1.65;color:var(--ink-mid)}
+.badge{display:inline-block;font-size:8px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:2px 5px;border:1px solid currentColor;font-family:"Libre Franklin",sans-serif;vertical-align:middle}
 .badge.live{color:#1a5c37;border-color:#1a5c37}
 .badge.build{color:#3d3680;border-color:#3d3680}
 .rule-heavy{border:0;border-top:3px double var(--ink);margin:1.5rem 0 0}
 .rule-thin{border:0;border-top:1px solid var(--rule-light);margin:0}
 .sub-section-head{font-family:"Playfair Display",serif;font-style:italic;font-size:clamp(.9rem,1.4vw,1.1rem);color:var(--ink-muted);text-align:center;padding:10px 0 8px;border-bottom:1px solid var(--rule-light);position:relative}
-.sub-section-head::after{content:attr(data-label);position:absolute;left:0;top:50%;transform:translateY(-50%);font-family:"Libre Franklin",sans-serif;font-style:normal;font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:700}
-.footer-wrap{max-width:var(--max);margin:0 auto;padding:12px 1.5rem;border-top:3px double var(--ink);display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
-.footer-wrap p{font-family:"Libre Franklin",sans-serif;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-muted)}
+.sub-section-head::after{content:attr(data-label);position:absolute;left:0;top:50%;transform:translateY(-50%);font-family:"Libre Franklin",sans-serif;font-style:normal;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.footer-wrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:1rem;padding:16px 0 22px;border-top:3px double var(--ink)}
+.footer-wrap p{font-family:"Libre Franklin",sans-serif;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-muted);text-align:center}
+.footer-wrap p:last-child{text-align:right}
 .footer-wrap a{color:var(--ink-muted);text-decoration:underline}
-.footer-logo img{height:20px;width:auto;opacity:.6}
-@media(max-width:900px){.col-4{grid-template-columns:1fr 1fr}.col-lead{grid-template-columns:1fr}.col-div{display:none}}
-@media(max-width:600px){.col-3,.col-4,.col-2{grid-template-columns:1fr}.story{border-right:0;border-bottom:1px solid var(--rule-light)}.story:last-child{border-bottom:0}}
+.footer-logo img{display:block;height:18px;width:auto;opacity:.75}
+@media(max-width:900px){.col-4{grid-template-columns:1fr 1fr}.col-lead{grid-template-columns:1fr}.col-div{display:none}.col-4>.story:nth-child(2n){border-right:0}.col-4>.story:nth-child(-n+2){border-bottom:1px solid var(--rule-light)}.masthead-meta{display:none}.masthead-title{grid-template-columns:1fr auto}.masthead-sub{grid-template-columns:1fr;justify-items:center;text-align:center;gap:6px}.masthead-counts{justify-self:center}}
+@media(max-width:600px){
+  body{padding:0}
+  .sheet{padding:20px 16px 0;box-shadow:none}
+  .masthead-title{grid-template-columns:1fr;justify-items:center;gap:14px}
+  .masthead-title h1{font-size:2.1rem}
+  .section-nav{grid-template-columns:1fr 1fr}
+  .nav-btn:nth-child(2){border-right:0}
+  .nav-btn:nth-child(-n+2){border-bottom:1px solid var(--rule-light)}
+  .nav-btn{letter-spacing:.12em}
+  .col-3,.col-4,.col-2{grid-template-columns:1fr}.story{border-right:0;border-bottom:1px solid var(--rule-light)}.story:last-child{border-bottom:0}
+  .footer-wrap{grid-template-columns:1fr;justify-items:center}
+  .footer-wrap p:last-child{text-align:center}
+}
 
 
 .video-btn{
@@ -88,28 +105,25 @@ a{color:inherit;text-decoration:none}
   transition:background 150ms,color 150ms,border-color 150ms;
 }
 .video-btn:hover .video-play{background:var(--ink);color:var(--paper);border-color:var(--ink)}
-.video-wrap{margin-top:12px;overflow:hidden;border:1px solid var(--rule-light)}
+.video-wrap{margin-top:auto;overflow:hidden;border:1px solid var(--rule-light)}
+.story>a>.deck{margin-bottom:14px}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 </head>
 <body>
-<div class="masthead-wrap">
-  <div class="masthead-top">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
+<div class="sheet">
+<header class="masthead-wrap">
   <div class="masthead-title">
-  <div><img src="assets/logo.png" alt="Frontier Commons" style="height:36px;width:auto"></div>
-  <h1>The Portfolio</h1>
-  <div></div>
-</div>
+    <a class="masthead-logo" href="https://frontiercommons.org" target="_blank" rel="noopener"><img src="assets/logo.png" alt="Frontier Commons"></a>
+    <h1>The Portfolio</h1>
+    <div class="masthead-meta"><b>2026</b>Three Cohorts · 36 Projects</div>
+  </div>
   <div class="masthead-sub">
-    <span class="edition"></span>
+    <span class="edition">A Ministry of IFI</span>
     <span class="tagline">"Every tool built with ministry workers and shaped by their feedback."</span>
     <div class="masthead-counts"><span><b>13</b> Spring</span><span><b>7</b> Summer</span><span><b>16</b> Fall</span></div>
   </div>
-</div>
+</header>
 <nav class="section-nav" role="tablist">
   <button class="nav-btn" role="tab" aria-pressed="false" onclick="show('spring',this)">Spring Edition</button>
   <button class="nav-btn" role="tab" aria-pressed="false" onclick="show('summer',this)">Summer Edition</button>
@@ -137,6 +151,7 @@ a{color:inherit;text-decoration:none}
   <p>Frontier Commons · Portfolio 2026 · A ministry of IFI · 501(c)(3)</p>
   <p><a href="https://frontiercommons.org" target="_blank">frontiercommons.org</a> · <a href="https://frontiercommons.org/tools/" target="_blank">All Tools</a></p>
 </footer>
+</div>
 <script>
 window.show=function(s,btn){['spring','summer','fall','all'].forEach(id=>document.getElementById('panel-'+id).hidden=id!==s);document.querySelectorAll('.nav-btn').forEach(b=>b.setAttribute('aria-pressed',b===btn?'true':'false'));history.replaceState(null,'','#'+s);};
 var h=(location.hash||'').slice(1),m={spring:0,summer:1,fall:2,all:3};
